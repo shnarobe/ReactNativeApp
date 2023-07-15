@@ -4,6 +4,11 @@
     "web": {
       "bundler": "metro"
     },
+    "splash": {
+      "image": "../../assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
+    },
     "name": "Foundit",
     "slug": "Foundit"
   }

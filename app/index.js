@@ -12,19 +12,20 @@ import {
   StatusBar,
   useWindowDimensions,
   ScrollView,
+  TouchableOpacity,
 } from "react-native";
-import React, { useState } from "react";
+import { React, useState } from "react";
 import { useDeviceOrientation } from "@react-native-community/hooks";
 //use this as the default safe area provider which works for both ios and android
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import { Stack, useRouter } from "expo-router";
-import ScreenHeaderBtn from "../Components/common/ScreenHeaderBtn";
+import { Link, Stack, useRouter } from "expo-router";
+import ScreenHeaderBtn from "../Components/common/header/ScreenHeaderBtn";
 import Welcome from "../Components/home/welcome/Welcome";
 import Login from "../Components/Login";
 import MapHolder from "../Components/MapHolder";
 import PopularProducts from "../Components/home/popular/PopularProducts";
 import { COLORS, icons, images, SIZES } from "../constants";
-import NearbyProducts from "../Components/home/nearby/NearbyProducts";
+import NearbyProducts from "../Components/home/nearby/NearbySellers";
 
 //import { Button } from "bootstrap";
 
@@ -97,11 +98,10 @@ export default function Home() {
             <Welcome></Welcome>
             <PopularProducts></PopularProducts>
             <NearbyProducts></NearbyProducts>
-            <Login></Login>
-            <MapHolder></MapHolder>
-            <MapHolder></MapHolder>
-            <MapHolder></MapHolder>
-            <MapHolder></MapHolder>
+            <Link href="/login">
+              <Text style={{ fontSize: 25 }}>Login</Text>
+            </Link>
+
             <MapHolder></MapHolder>
             <MapHolder></MapHolder>
             <MapHolder></MapHolder>

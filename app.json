@@ -5,7 +5,7 @@
       "bundler": "metro"
     },
     "splash": {
-      "image": "../../assets/splash.png",
+      "image": "../../assets/images/splash.png",
       "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },

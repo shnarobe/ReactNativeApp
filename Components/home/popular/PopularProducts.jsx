@@ -45,6 +45,9 @@ function PopularProducts() {
               <PopularProductCard
                 item={item}
                 selectedProduct={item.name}
+                handleCardPress={() =>
+                  router.push(`/product-details/${item.product_id}`)
+                }
               ></PopularProductCard>
             )}
             keyExtractor={(item) => item?.product_id}

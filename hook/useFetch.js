@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 //import { OPEN_CART_API_KEY } from "@env";
 
-function useFetch(endpoint) {
+function useFetch(endpoint, params = {}) {
   const [data, setData] = useState([]); //holds the returned data from api call
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);

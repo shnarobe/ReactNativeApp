@@ -8,11 +8,12 @@ const PopularProductCard = ({ item, selectedProduct, handleCardPress }) => {
   return (
     <TouchableOpacity
       style={styles.container(selectedProduct, item)}
-      onPress={() => {
-        handleCardPress(item);
-      }}
+      onPress={handleCardPress}
     >
-      <TouchableOpacity style={styles.logoContainer(selectedProduct, item)}>
+      <TouchableOpacity
+        style={styles.logoContainer(selectedProduct, item)}
+        onPress={handleCardPress}
+      >
         <Image
           source={{
             uri: checkImageURL(item.thumb)
